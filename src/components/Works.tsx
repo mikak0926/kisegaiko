@@ -79,12 +79,12 @@ export default function Works() {
               02 — WORKS
             </p>
             <h2 className="font-heading text-[clamp(1.75rem,3.4vw,2.75rem)] leading-[1.7] tracking-[0.12em]">
-              一邸ごとに、
+              敷地が違えば、
               <br />
-              答えは違う。
+              納まりも変わります。
             </h2>
             <p className="mt-8 max-w-sm text-sm leading-[2.4] text-kinari/60">
-              同じ図面を二度使ったことはありません。敷地の向き、家族の暮らし方、隣家との関係。条件が違えば、最適な形も変わります。
+              同じ図面を二度使うことはありません。敷地の向き、道路との高低差、隣家との距離。条件が変われば納まりも変わるので、一件ずつ引き直しています。
             </p>
             <p
               aria-hidden

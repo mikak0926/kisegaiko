@@ -38,7 +38,7 @@ export default function Service() {
           04 — SERVICE
         </p>
         <RevealText
-          lines={["敷地の外側すべてを、", "ひと続きで請け負います。"]}
+          lines={["門まわりから土間まで、", "一括して承ります。"]}
           className="font-heading text-[clamp(1.75rem,3.4vw,2.75rem)] leading-[1.7] tracking-[0.12em]"
         />
 

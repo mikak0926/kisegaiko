@@ -25,7 +25,7 @@ export default function Hero() {
               style={{ ["--d" as string]: "2000ms" }}
               className="block font-heading text-[clamp(2.25rem,7vw,5.5rem)] leading-[1.35] tracking-[0.1em]"
             >
-              家の輪郭を、
+              家のまわりを、
             </span>
           </span>
           <span className="line">
@@ -33,7 +33,7 @@ export default function Hero() {
               style={{ ["--d" as string]: "2140ms" }}
               className="block font-heading text-[clamp(2.25rem,7vw,5.5rem)] leading-[1.35] tracking-[0.1em]"
             >
-              風景にする。
+              一邸ずつ設計する。
             </span>
           </span>
         </h1>
@@ -43,7 +43,7 @@ export default function Hero() {
           style={{ ["--d" as string]: "2500ms" }}
           className="mt-8 max-w-md text-sm leading-[2.4] text-kinari/85 sm:text-base"
         >
-          門から玄関までのわずか数歩に、住まいの品格は表れます。<br />設計から施工まで、一邸ごとに向き合う外構をつくっています。
+          門まわり、駐車場、塀とフェンス、植栽。<br />建物の外側にあるものを、設計から施工まで一貫して手がけています。
         </p>
       </div>
 

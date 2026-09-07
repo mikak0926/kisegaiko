@@ -30,7 +30,7 @@ export default function Contact() {
         <div className="grid gap-16 lg:grid-cols-12 lg:gap-20">
           <div className="lg:col-span-5">
             <RevealText
-              lines={["まずは、", "敷地を見せてください。"]}
+              lines={["まずは、", "現地を拝見します。"]}
               className="font-heading text-[clamp(1.75rem,3.4vw,2.75rem)] leading-[1.7] tracking-[0.12em]"
             />
             <p

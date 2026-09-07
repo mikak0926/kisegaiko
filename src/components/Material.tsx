@@ -39,7 +39,7 @@ export default function Material() {
           03 — MATERIAL
         </p>
         <RevealText
-          lines={["手が触れるところに、", "いちばん時間をかける。"]}
+          lines={["仕上げの質感は、", "経年で変わっていきます。"]}
           className="font-heading text-[clamp(1.75rem,3.4vw,2.75rem)] leading-[1.7] tracking-[0.12em]"
         />
 

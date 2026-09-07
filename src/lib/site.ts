@@ -4,7 +4,7 @@
 export const site = {
   name: "喜瀬外構",
   nameEn: "KISE GAIKO",
-  tagline: "家の輪郭を、風景にする。",
+  tagline: "家のまわりを、一邸ずつ設計する。",
   descriptionShort:
     "設計から施工まで一貫して手がける、一邸ごとの外構・エクステリア。",
   founded: 2026,
