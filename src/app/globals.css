@@ -66,13 +66,15 @@ html:not(.lenis) { scroll-behavior: smooth; }
 }
 [data-reveal].is-in { opacity: 1; transform: none; }
 
-/* 画像: 下から蓋が開き、内側の画像は逆に縮む(二重動作) */
-[data-reveal-clip] {
+/* 画像: 下から蓋が開き、内側の画像は逆に縮む(二重動作)。
+   clip-path は監視対象そのものではなく内側の .clip にかける
+   (監視対象を潰すと IntersectionObserver が交差を検出できなくなるため)。 */
+[data-reveal-clip] > .clip {
   clip-path: inset(0 0 100% 0);
   transition: clip-path 1.3s var(--ease);
   transition-delay: var(--d, 0ms);
 }
-[data-reveal-clip].is-in { clip-path: inset(0 0 0 0); }
+[data-reveal-clip].is-in > .clip { clip-path: inset(0 0 0 0); }
 [data-reveal-clip] :is(img, video) {
   transform: scale(1.18);
   transition: transform 1.8s var(--ease);
@@ -140,7 +142,7 @@ html:not(.lenis) { scroll-behavior: smooth; }
     transition-duration: 0.001ms !important;
   }
   [data-reveal] { opacity: 1 !important; transform: none !important; }
-  [data-reveal-clip] { clip-path: none !important; }
+  [data-reveal-clip] > .clip { clip-path: none !important; }
   [data-reveal-clip] :is(img, video) { transform: none !important; }
   [data-reveal-line] .line > span { transform: none !important; }
   .kenburns { animation: none !important; }
