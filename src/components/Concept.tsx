@@ -50,7 +50,7 @@ export default function Concept() {
           <Parallax speed={-0.04}>
             <RevealImage
               src="/images/concept.jpg"
-              alt="門まわりの構成イメージ"
+              alt="コンクリートの塀と飛石のアプローチ"
               sizes="(max-width: 1024px) 100vw, 55vw"
               className="aspect-[4/3] w-full"
             />
