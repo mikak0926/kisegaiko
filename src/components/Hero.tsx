@@ -25,7 +25,7 @@ export default function Hero() {
               style={{ ["--d" as string]: "2000ms" }}
               className="block font-heading text-[clamp(2.25rem,7vw,5.5rem)] leading-[1.35] tracking-[0.1em]"
             >
-              施工する職人が、
+              一枚の塀から、
             </span>
           </span>
           <span className="line">
@@ -33,7 +33,7 @@ export default function Hero() {
               style={{ ["--d" as string]: "2140ms" }}
               className="block font-heading text-[clamp(2.25rem,7vw,5.5rem)] leading-[1.35] tracking-[0.1em]"
             >
-              はじめから伺います。
+              一邸の外構まで。
             </span>
           </span>
         </h1>
@@ -43,7 +43,7 @@ export default function Hero() {
           style={{ ["--d" as string]: "2500ms" }}
           className="mt-8 max-w-md text-sm leading-[2.4] text-kinari/85 sm:text-base"
         >
-          門まわり、駐車場、塀とフェンス、植栽。<br />建物の外側まわりの工事を、見積りから施工まで同じ人間が担当します。
+          塀の一枚、土間の一区画からでも承ります。<br />見積りから施工まで、現場に立つ職人がそのまま担当します。
         </p>
       </div>
 

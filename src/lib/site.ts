@@ -4,7 +4,7 @@
 export const site = {
   name: "喜瀬外構",
   nameEn: "KISE GAIKO",
-  tagline: "現場に立つ職人が、直接お受けします。",
+  tagline: "一枚の塀から、一邸の外構まで。",
   descriptionShort:
     "門まわりから駐車場、塀、植栽まで。外構・エクステリア工事を職人が直接施工します。",
   founded: 2026,
