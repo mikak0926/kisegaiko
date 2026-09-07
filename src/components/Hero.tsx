@@ -1,20 +1,10 @@
-import Image from "next/image";
+import HeroMedia from "./HeroMedia";
 import { site } from "@/lib/site";
 
 export default function Hero() {
   return (
     <section id="top" className="relative h-[100svh] w-full overflow-hidden">
-      <div className="absolute inset-0">
-        <Image
-          src="/images/hero.jpg"
-          alt="木天井のカーポートと洗い出し土間のある外構"
-          fill
-          priority
-          sizes="100vw"
-          quality={90}
-          className="kenburns object-cover"
-        />
-      </div>
+      <HeroMedia />
       <div
         aria-hidden
         className="absolute inset-0 bg-gradient-to-b from-sumi/50 via-sumi/15 to-sumi/85"
