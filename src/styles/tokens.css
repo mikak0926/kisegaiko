@@ -1,0 +1,29 @@
+/*
+ * 喜瀬外構 — デザイントークン
+ * 方向性: 高級・静謐・引き算。真鍮を唯一のアクセントに、墨と生成りで構成する。
+ */
+
+:root {
+  /* base */
+  --sumi: #16130f;        /* 墨 — 背景・文字 */
+  --sumi-80: #2a251f;
+  --kinari: #f5f2ec;      /* 生成り — 明るい面 */
+  --sekkai: #d9d3c7;      /* 石灰 — 罫線・補助 */
+  --shinryoku: #2f3a31;   /* 深緑 — 植栽の含み */
+  --shinchu: #a8875a;     /* 真鍮 — 唯一のアクセント */
+
+  --line: rgba(22, 19, 15, 0.14);
+  --line-light: rgba(245, 242, 236, 0.22);
+
+  --font-heading: var(--font-shippori), 'Shippori Mincho B1', serif;
+  --font-body: var(--font-noto-sans-jp), 'Noto Sans JP', sans-serif;
+  --font-en: var(--font-cormorant), 'Cormorant Garamond', serif;
+
+  /* motion */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur: 900ms;
+
+  /* layout */
+  --gutter: clamp(1.5rem, 6vw, 8rem);
+  --section-y: clamp(7rem, 18vh, 14rem);
+}

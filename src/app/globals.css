@@ -1,0 +1,154 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+
+@theme inline {
+  --color-sumi: var(--sumi);
+  --color-sumi-80: var(--sumi-80);
+  --color-kinari: var(--kinari);
+  --color-sekkai: var(--sekkai);
+  --color-shinryoku: var(--shinryoku);
+  --color-shinchu: var(--shinchu);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+  --font-en: var(--font-en);
+}
+
+/* ---------- base ---------- */
+html {
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  background: var(--kinari);
+  color: var(--sumi);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+}
+::selection {
+  background: var(--shinchu);
+  color: var(--kinari);
+}
+
+/* Lenis が有効な間はネイティブのスムーススクロールを止める */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+html:not(.lenis) { scroll-behavior: smooth; }
+
+/* ---------- reveal engine ----------
+   JS は .is-in を付けるだけ。見え方はすべてこの CSS が持つ。 */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease);
+  transition-delay: var(--d, 0ms);
+  will-change: opacity, transform;
+}
+[data-reveal].is-in { opacity: 1; transform: none; }
+
+/* 画像: 下から蓋が開き、内側の画像は逆に縮む(二重動作) */
+[data-reveal-clip] {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 1.3s var(--ease);
+  transition-delay: var(--d, 0ms);
+}
+[data-reveal-clip].is-in { clip-path: inset(0 0 0 0); }
+[data-reveal-clip] :is(img, video) {
+  transform: scale(1.18);
+  transition: transform 1.8s var(--ease);
+  transition-delay: var(--d, 0ms);
+}
+[data-reveal-clip].is-in :is(img, video) { transform: scale(1); }
+
+/* 見出し: 行マスクのせり上がり */
+[data-reveal-line] .line { display: block; overflow: hidden; }
+[data-reveal-line] .line > span {
+  display: block;
+  transform: translateY(110%);
+  transition: transform 1.1s var(--ease);
+  transition-delay: var(--d, 0ms);
+}
+[data-reveal-line].is-in .line > span { transform: none; }
+
+/* ---------- marquee ---------- */
+@keyframes marquee { from { transform: translate3d(0,0,0); } to { transform: translate3d(-50%,0,0); } }
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+/* ---------- ken burns ---------- */
+@keyframes kenburns { from { transform: scale(1.14); } to { transform: scale(1); } }
+.kenburns { animation: kenburns 16s var(--ease) forwards; }
+
+/* ---------- misc ---------- */
+.vertical { writing-mode: vertical-rl; text-orientation: mixed; }
+
+.rule { height: 1px; background: var(--line); }
+.rule-light { height: 1px; background: var(--line-light); }
+
+/* 枠線ボタン: ホバーで真鍮が左から満ちる */
+.btn-line {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.15rem 2.75rem;
+  border: 1px solid currentColor;
+  overflow: hidden;
+  font-size: 0.875rem;
+  letter-spacing: 0.28em;
+  transition: color 700ms var(--ease), border-color 700ms var(--ease);
+}
+.btn-line::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--shinchu);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 700ms var(--ease);
+  z-index: 0;
+}
+.btn-line > * { position: relative; z-index: 1; }
+.btn-line:hover { color: var(--kinari); border-color: var(--shinchu); }
+.btn-line:hover::before { transform: scaleX(1); }
+
+/* カスタムカーソル(デスクトップのみ) */
+@media (hover: hover) and (pointer: fine) {
+  .cursor-host, .cursor-host * { cursor: none; }
+}
+
+/* ---------- reduced motion: 演出を全停止し最終状態で固定 ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+  [data-reveal-clip] { clip-path: none !important; }
+  [data-reveal-clip] :is(img, video) { transform: none !important; }
+  [data-reveal-line] .line > span { transform: none !important; }
+  .marquee-track { animation: none !important; }
+  .kenburns { animation: none !important; }
+}
+
+@keyframes rise {
+  from { transform: translateY(110%); opacity: 0; }
+  to   { transform: none; opacity: 1; }
+}
+
+@keyframes scrollcue {
+  0%   { transform: translateY(-100%); }
+  60%  { transform: translateY(150%); }
+  100% { transform: translateY(150%); }
+}
