@@ -5,7 +5,7 @@ import SectionLabel from "./ui/SectionLabel";
 const notes = [
   {
     src: "/images/material-01.jpg",
-    alt: "杉板の木目と左官仕上げの壁のディテール",
+    alt: "軒天の木板と左官壁が接するディテール",
     title: "木と左官",
     body: "木は経年で色を落ち着かせ、左官は光の角度で表情を変えます。どちらも「完成した瞬間が頂点ではない」素材です。",
   },
