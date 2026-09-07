@@ -50,7 +50,7 @@ export default function Concept() {
           <Parallax speed={-0.04}>
             <RevealImage
               src="/images/concept.jpg"
-              alt="外構計画の手描きパース"
+              alt="門まわりの構成イメージ"
               sizes="(max-width: 1024px) 100vw, 55vw"
               className="aspect-[4/3] w-full"
             />
@@ -61,7 +61,7 @@ export default function Concept() {
               style={{ ["--d" as string]: "160ms" }}
               className="max-w-xs text-xs leading-[2.2] text-sumi/55"
             >
-              図面を引く前に、まず手を動かして描く。線の粗さの中に、現場で決めるべきことが見えてきます。
+              壁・土間・植栽。三つの面積比が決まれば、外構の骨格はほぼ決まります。
             </p>
             <p
               data-reveal
