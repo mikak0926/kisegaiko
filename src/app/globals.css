@@ -32,6 +32,19 @@ h1, h2, h3, h4 {
   line-height: 1.6;
   letter-spacing: 0.08em;
 }
+
+/* 日本語の折り返しを文節単位にする。
+   「一つの『間』/として」のように語の途中で折れるのを防ぐ。
+   auto-phrase 未対応のブラウザでは従来どおりの禁則処理にフォールバックする。 */
+p, h1, h2, h3, h4, dt, dd, li, figcaption, label, blockquote {
+  word-break: auto-phrase;
+  text-wrap: pretty;
+}
+
+/* 英字のラベルは文節解析の対象外 */
+.font-en {
+  word-break: normal;
+}
 ::selection {
   background: var(--shinchu);
   color: var(--kinari);

@@ -43,9 +43,7 @@ export default function Hero() {
           style={{ ["--d" as string]: "2500ms" }}
           className="mt-8 max-w-md text-sm leading-[2.4] text-kinari/85 sm:text-base"
         >
-          門から玄関までのわずか数歩に、住まいの品格は表れます。
-          <br />
-          設計から施工まで、一邸ごとに向き合う外構をつくっています。
+          門から玄関までのわずか数歩に、住まいの品格は表れます。<br />設計から施工まで、一邸ごとに向き合う外構をつくっています。
         </p>
       </div>
 

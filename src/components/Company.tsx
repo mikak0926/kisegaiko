@@ -43,10 +43,7 @@ export default function Company() {
               style={{ ["--d" as string]: "200ms" }}
               className="mt-10 max-w-md text-sm leading-[2.6] text-sumi/75"
             >
-              {site.name}は{site.founded}年に創業しました。
-              実績の数を誇れる会社ではありません。
-              その代わり、一件ごとに設計者と職人が同じ現場に立ち、
-              図面の一本の線まで確かめながら仕上げています。
+              {site.name}は{site.founded}年に創業しました。実績の数を誇れる会社ではありません。その代わり、一件ごとに設計者と職人が同じ現場に立ち、図面の一本の線まで確かめながら仕上げています。
             </p>
 
             <div

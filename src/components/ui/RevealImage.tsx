@@ -20,7 +20,7 @@ export default function RevealImage({
     <div
       data-reveal-clip
       data-cursor="view"
-      className={`relative overflow-hidden ${className}`}
+      className={`relative overflow-hidden bg-sekkai/15 ${className}`}
       style={{ ["--d" as string]: `${delay}ms` }}
     >
       <Image

@@ -84,9 +84,7 @@ export default function Works() {
               答えは違う。
             </h2>
             <p className="mt-8 max-w-sm text-sm leading-[2.4] text-kinari/60">
-              同じ図面を二度使ったことはありません。
-              敷地の向き、家族の暮らし方、隣家との関係。
-              条件が違えば、最適な形も変わります。
+              同じ図面を二度使ったことはありません。敷地の向き、家族の暮らし方、隣家との関係。条件が違えば、最適な形も変わります。
             </p>
             <p
               aria-hidden
