@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 const rows: [string, string][] = [
   ["会社名", site.name],
   ["創業", `${site.founded}年`],
-  ["事業内容", "外構・エクステリアの設計および施工／造園・植栽工事／土間コンクリート工事"],
+  ["事業内容", "外構・エクステリア工事／ブロック・フェンス工事／土間コンクリート工事／造園・植栽工事"],
   ["所在地", site.address],
   ["営業時間", site.hours],
   ["対応エリア", site.areas],
@@ -35,7 +35,7 @@ export default function Company() {
         <div className="grid gap-16 lg:grid-cols-12 lg:gap-20">
           <div className="lg:col-span-5">
             <RevealText
-              lines={["図面を引いた人間が、", "そのまま現場に立ちます。"]}
+              lines={["伺うのも、", "施工するのも同じ人間です。"]}
               className="font-heading text-[clamp(1.75rem,3.4vw,2.75rem)] leading-[1.7] tracking-[0.12em]"
             />
             <p
@@ -43,7 +43,7 @@ export default function Company() {
               style={{ ["--d" as string]: "200ms" }}
               className="mt-10 max-w-md text-sm leading-[2.6] text-sumi/75"
             >
-              {site.name}は{site.founded}年の創業です。設計と施工を分けていません。図面では決めきれない納まりや、現場に立って初めて分かる寸法があります。それを引いた本人が確かめながら進める体制をとっています。
+              {site.name}は{site.founded}年の創業です。現場で外構をつくってきた職人が独立して始めました。打ち合わせ、見積り、施工までを同じ人間が担当します。伝言で話が薄まることがなく、現場で判断が要る場面もその場で決められます。
             </p>
 
             <div

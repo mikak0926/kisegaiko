@@ -21,7 +21,7 @@ export default function Concept() {
           </p>
 
           <RevealText
-            lines={["建物と同じように、", "外構にも設計があります。"]}
+            lines={["決まるのは紙の上ではなく、", "現場の寸法です。"]}
             className="font-heading text-[clamp(1.75rem,3.4vw,2.75rem)] leading-[1.7] tracking-[0.12em]"
           />
 

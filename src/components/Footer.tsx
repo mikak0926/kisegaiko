@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <p className="font-heading text-xl tracking-[0.4em]">{site.name}</p>
             <p className="mt-3 font-en text-[0.65rem] tracking-[0.4em] text-kinari/45">
-              {site.nameEn} — EXTERIOR ARCHITECTURE
+              {site.nameEn} — EXTERIOR WORKS
             </p>
           </div>
 
