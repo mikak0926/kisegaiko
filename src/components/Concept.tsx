@@ -55,14 +55,7 @@ export default function Concept() {
               className="aspect-[4/3] w-full"
             />
           </Parallax>
-          <div className="mt-6 flex items-start justify-between gap-8">
-            <p
-              data-reveal
-              style={{ ["--d" as string]: "160ms" }}
-              className="max-w-xs text-xs leading-[2.2] text-sumi/55"
-            >
-              壁・土間・植栽。三つの面積比が決まれば、外構の骨格はほぼ決まります。
-            </p>
+          <div className="mt-6 flex items-start justify-end gap-8">
             <p
               data-reveal
               style={{ ["--d" as string]: "240ms" }}

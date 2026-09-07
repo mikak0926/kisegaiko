@@ -35,7 +35,7 @@ export default function Company() {
         <div className="grid gap-16 lg:grid-cols-12 lg:gap-20">
           <div className="lg:col-span-5">
             <RevealText
-              lines={["新しい会社です。", "だから、一邸に本気です。"]}
+              lines={["図面を引いた人間が、", "そのまま現場に立ちます。"]}
               className="font-heading text-[clamp(1.75rem,3.4vw,2.75rem)] leading-[1.7] tracking-[0.12em]"
             />
             <p
@@ -43,7 +43,7 @@ export default function Company() {
               style={{ ["--d" as string]: "200ms" }}
               className="mt-10 max-w-md text-sm leading-[2.6] text-sumi/75"
             >
-              {site.name}は{site.founded}年に創業しました。実績の数を誇れる会社ではありません。その代わり、一件ごとに設計者と職人が同じ現場に立ち、図面の一本の線まで確かめながら仕上げています。
+              {site.name}は{site.founded}年の創業です。設計と施工を分けていません。図面では決めきれない納まりや、現場に立って初めて分かる寸法があります。それを引いた本人が確かめながら進める体制をとっています。
             </p>
 
             <div
