@@ -7,8 +7,15 @@ import { works } from "@/lib/works";
 import SectionLabel from "./ui/SectionLabel";
 
 /**
- * 縦スクロール量を横移動に変換するピン留めギャラリー。
- * 768px 未満、および reduced-motion 時は通常の横スワイプに退避する。
+ * 施工事例ギャラリー。
+ *
+ * 768px 以上のマウス環境では、縦スクロール量を横移動に変換するピン留め表示。
+ * それ未満、タッチ環境、reduced-motion では通常の横スワイプに退避する。
+ *
+ * 見出しの出し分けは CSS のブレークポイントで行う(JS の状態で切り替えると
+ * ハイドレーション後に一瞬入れ替わって見えるため)。
+ * - 768px 未満: スクローラーの外に通常のブロックとして置く
+ * - 768px 以上: 横に流れる1枚目のパネルとして置く
  */
 export default function Works() {
   const outer = useRef<HTMLElement>(null);
@@ -19,6 +26,7 @@ export default function Works() {
     const check = () =>
       setPinned(
         window.innerWidth >= 768 &&
+          window.matchMedia("(pointer: fine)").matches &&
           !window.matchMedia("(prefers-reduced-motion: reduce)").matches,
       );
     check();
@@ -49,6 +57,24 @@ export default function Works() {
     ? { height: `${(works.length + 1) * 62}vh` }
     : undefined;
 
+  const eyebrow = (
+    <p className="font-en text-[0.78rem] tracking-[0.45em] text-shinchu sm:text-[0.7rem]">
+      02 — WORKS
+    </p>
+  );
+  const title = (
+    <h2 className="font-heading text-[clamp(1.75rem,3.4vw,2.75rem)] leading-[1.7] tracking-[0.12em]">
+      敷地が違えば、
+      <br />
+      納まりも変わります。
+    </h2>
+  );
+  const lead = (
+    <p className="max-w-sm text-sm leading-[2.4] text-kinari/60">
+      同じ敷地は二つとありません。向き、道路との高低差、隣家との距離。条件が変われば納まりも変わるので、現場を見てから決めています。
+    </p>
+  );
+
   return (
     <section
       id="works"
@@ -58,11 +84,24 @@ export default function Works() {
     >
       <SectionLabel no="02" en="WORKS" ja="事例" tone="light" />
 
+      {/* 768px 未満: 見出しはスクローラーの外に置く */}
+      <div className="px-[var(--gutter)] pt-[var(--section-y)] pb-12 md:hidden">
+        {eyebrow}
+        <div className="mt-8">{title}</div>
+        <div className="mt-8">{lead}</div>
+        <p
+          aria-hidden
+          className="mt-10 font-en text-[0.68rem] tracking-[0.35em] text-kinari/35"
+        >
+          SWIPE →
+        </p>
+      </div>
+
       <div
         className={
           pinned
             ? "sticky top-0 flex h-[100svh] items-center overflow-hidden"
-            : "flex items-center overflow-hidden py-[var(--section-y)]"
+            : "flex items-center overflow-hidden pb-[var(--section-y)] md:pt-[var(--section-y)]"
         }
       >
         <div
@@ -73,22 +112,14 @@ export default function Works() {
               : "flex w-full snap-x snap-mandatory gap-6 overflow-x-auto px-[var(--gutter)] pb-6 [scrollbar-width:none]"
           }
         >
-          {/* 先頭のカードは見出しそのもの */}
-          <div className="flex w-[min(78vw,26rem)] shrink-0 snap-start flex-col justify-center">
-            <p className="mb-8 font-en text-[0.78rem] sm:text-[0.7rem] tracking-[0.45em] text-shinchu">
-              02 — WORKS
-            </p>
-            <h2 className="font-heading text-[clamp(1.75rem,3.4vw,2.75rem)] leading-[1.7] tracking-[0.12em]">
-              敷地が違えば、
-              <br />
-              納まりも変わります。
-            </h2>
-            <p className="mt-8 max-w-sm text-sm leading-[2.4] text-kinari/60">
-              同じ敷地は二つとありません。向き、道路との高低差、隣家との距離。条件が変われば納まりも変わるので、現場を見てから決めています。
-            </p>
+          {/* 768px 以上: 見出しは横に流れる1枚目のパネル */}
+          <div className="hidden w-[min(78vw,26rem)] shrink-0 snap-start flex-col justify-center md:flex">
+            <div className="mb-8">{eyebrow}</div>
+            {title}
+            <div className="mt-8">{lead}</div>
             <p
               aria-hidden
-              className="mt-12 font-en text-[0.68rem] sm:text-[0.6rem] tracking-[0.35em] text-kinari/35"
+              className="mt-12 font-en text-[0.68rem] tracking-[0.35em] text-kinari/35"
             >
               {pinned ? "SCROLL →" : "SWIPE →"}
             </p>
@@ -111,7 +142,7 @@ export default function Works() {
               </div>
 
               <div className="mt-7 flex items-baseline gap-5">
-                <span className="font-en text-xs tracking-[0.3em] text-shinchu">
+                <span className="font-en text-[0.78rem] tracking-[0.3em] text-shinchu sm:text-[0.7rem]">
                   {w.no}
                 </span>
                 <h3 className="font-heading text-xl tracking-[0.18em]">
@@ -121,7 +152,7 @@ export default function Works() {
               <p className="mt-4 max-w-md text-sm leading-[2.3] text-kinari/60">
                 {w.body}
               </p>
-              <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[0.78rem] sm:text-[0.7rem] tracking-[0.2em] text-kinari/40">
+              <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[0.78rem] tracking-[0.2em] text-kinari/40 sm:text-[0.7rem]">
                 <span>{w.place}</span>
                 <span className="h-px w-6 bg-kinari/25" />
                 <span className="font-en">{w.year}</span>
