@@ -34,7 +34,7 @@ export default function Service() {
       <SectionLabel no="04" en="SERVICE" ja="業務" />
 
       <div className="mx-auto max-w-[1400px] px-[var(--gutter)]">
-        <p data-reveal className="mb-8 font-en text-[0.7rem] tracking-[0.45em] text-shinchu">
+        <p data-reveal className="mb-8 font-en text-[0.78rem] sm:text-[0.7rem] tracking-[0.45em] text-shinchu">
           04 — SERVICE
         </p>
         <RevealText
@@ -55,7 +55,7 @@ export default function Service() {
               </span>
               <h3 className="font-heading text-xl tracking-[0.18em] md:col-span-4">
                 {s.title}
-                <span className="mt-2 block font-en text-[0.6rem] tracking-[0.3em] text-sumi/40">
+                <span className="mt-2 block font-en text-[0.68rem] sm:text-[0.6rem] tracking-[0.3em] text-sumi/40">
                   {s.en}
                 </span>
               </h3>

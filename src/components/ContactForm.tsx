@@ -22,7 +22,7 @@ async function submitContact(data: Record<string, string>): Promise<void> {
 
 const field =
   "mt-3 w-full border-b border-[color:var(--line-light)] bg-transparent px-1 py-3 text-sm text-kinari outline-none transition-colors duration-500 placeholder:text-kinari/25 focus:border-shinchu";
-const label = "block text-[0.7rem] tracking-[0.28em] text-kinari/50";
+const label = "block text-[0.78rem] sm:text-[0.7rem] tracking-[0.28em] text-kinari/50";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -103,7 +103,7 @@ export default function ContactForm() {
           <span>{status === "submitting" ? "送信中..." : "送信する"}</span>
           <span aria-hidden>→</span>
         </button>
-        <p className="text-[0.7rem] leading-[2] text-kinari/40">
+        <p className="text-[0.78rem] sm:text-[0.7rem] leading-[2] text-kinari/40">
           ご相談・現地調査・お見積りは無料です。
         </p>
       </div>

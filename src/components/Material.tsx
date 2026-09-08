@@ -35,7 +35,7 @@ export default function Material() {
       <SectionLabel no="03" en="MATERIAL" ja="素材" tone="light" />
 
       <div className="mx-auto max-w-[1400px] px-[var(--gutter)]">
-        <p data-reveal className="mb-8 font-en text-[0.7rem] tracking-[0.45em] text-shinchu">
+        <p data-reveal className="mb-8 font-en text-[0.78rem] sm:text-[0.7rem] tracking-[0.45em] text-shinchu">
           03 — MATERIAL
         </p>
         <RevealText

@@ -23,7 +23,7 @@ export default function Contact() {
       <SectionLabel no="07" en="CONTACT" ja="相談" tone="light" />
 
       <div className="relative mx-auto max-w-[1400px] px-[var(--gutter)]">
-        <p data-reveal className="mb-8 font-en text-[0.7rem] tracking-[0.45em] text-shinchu">
+        <p data-reveal className="mb-8 font-en text-[0.78rem] sm:text-[0.7rem] tracking-[0.45em] text-shinchu">
           07 — CONTACT
         </p>
 

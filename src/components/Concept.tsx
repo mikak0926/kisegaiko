@@ -15,7 +15,7 @@ export default function Concept() {
         <div className="lg:col-span-5 lg:pt-16">
           <p
             data-reveal
-            className="mb-8 font-en text-[0.7rem] tracking-[0.45em] text-shinchu"
+            className="mb-8 font-en text-[0.78rem] sm:text-[0.7rem] tracking-[0.45em] text-shinchu"
           >
             01 — CONCEPT
           </p>
@@ -59,7 +59,7 @@ export default function Concept() {
             <p
               data-reveal
               style={{ ["--d" as string]: "240ms" }}
-              className="shrink-0 font-en text-[0.65rem] tracking-[0.3em] text-sumi/40"
+              className="shrink-0 font-en text-[0.72rem] sm:text-[0.65rem] tracking-[0.3em] text-sumi/40"
             >
               FIG. 01
             </p>

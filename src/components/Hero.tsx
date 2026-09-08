@@ -7,14 +7,14 @@ export default function Hero() {
       <HeroMedia />
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-b from-sumi/50 via-sumi/15 to-sumi/85"
+        className="absolute inset-0 bg-gradient-to-b from-sumi/55 via-sumi/30 to-sumi/90 sm:from-sumi/50 sm:via-sumi/15 sm:to-sumi/85"
       />
 
       <div className="relative flex h-full flex-col justify-end px-[max(1.25rem,4vw)] pb-[max(4rem,12vh)]">
         <p
           data-reveal
           style={{ ["--d" as string]: "1900ms" }}
-          className="mb-6 font-en text-[0.7rem] tracking-[0.5em] text-kinari/75"
+          className="mb-6 font-en text-[0.7rem] tracking-[0.28em] text-kinari/90 sm:text-[0.7rem] sm:tracking-[0.5em] sm:text-kinari/75"
         >
           {site.nameEn} — EXTERIOR WORKS
         </p>
@@ -54,7 +54,7 @@ export default function Hero() {
         style={{ ["--d" as string]: "2800ms" }}
         className="absolute bottom-0 right-[max(1.25rem,4vw)] hidden flex-col items-center gap-4 sm:flex"
       >
-        <span className="vertical font-en text-[0.6rem] tracking-[0.4em] text-kinari/60">
+        <span className="vertical font-en text-[0.68rem] sm:text-[0.6rem] tracking-[0.4em] text-kinari/60">
           SCROLL
         </span>
         <span className="relative block h-20 w-px bg-kinari/25">

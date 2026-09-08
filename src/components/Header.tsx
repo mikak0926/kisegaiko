@@ -41,7 +41,7 @@ export default function Header() {
         <div className="flex items-center justify-between px-[max(1.25rem,4vw)] py-6">
           <a
             href="#top"
-            className={`font-heading text-lg tracking-[0.4em] transition-colors duration-500 ${
+            className={`inline-block py-2 font-heading text-lg tracking-[0.4em] transition-colors duration-500 ${
               light || open ? "text-kinari" : "text-sumi"
             }`}
           >
@@ -74,7 +74,7 @@ export default function Header() {
             aria-label={open ? "メニューを閉じる" : "メニューを開く"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="relative z-[70] flex h-10 w-10 flex-col items-center justify-center gap-[7px] lg:hidden"
+            className="relative z-[70] flex h-11 w-11 flex-col items-center justify-center gap-[7px] lg:hidden"
           >
             {[0, 1].map((i) => (
               <span
@@ -111,7 +111,7 @@ export default function Header() {
                 href={`#${item.id}`}
                 onClick={() => setOpen(false)}
                 tabIndex={open ? 0 : -1}
-                className="flex items-baseline gap-5 transition-transform duration-[900ms] [transition-timing-function:var(--ease)]"
+                className="flex items-baseline gap-5 py-1.5 transition-transform duration-[900ms] [transition-timing-function:var(--ease)]"
                 style={{
                   transform: open ? "none" : "translateY(110%)",
                   transitionDelay: open ? `${180 + i * 60}ms` : "0ms",
@@ -120,10 +120,10 @@ export default function Header() {
                 <span className="font-en text-xs tracking-[0.3em] text-shinchu">
                   0{i + 1}
                 </span>
-                <span className="font-heading text-3xl tracking-[0.2em] text-kinari">
+                <span className="font-heading text-[1.6rem] tracking-[0.16em] text-kinari sm:text-3xl sm:tracking-[0.2em]">
                   {item.label}
                 </span>
-                <span className="font-en text-[0.65rem] tracking-[0.3em] text-kinari/40">
+                <span className="hidden font-en text-[0.65rem] tracking-[0.3em] text-kinari/40 sm:inline">
                   {item.en}
                 </span>
               </a>

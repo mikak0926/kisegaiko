@@ -28,7 +28,7 @@ export default function Company() {
       />
 
       <div className="mx-auto mt-[var(--section-y)] max-w-[1400px] px-[var(--gutter)]">
-        <p data-reveal className="mb-8 font-en text-[0.7rem] tracking-[0.45em] text-shinchu">
+        <p data-reveal className="mb-8 font-en text-[0.78rem] sm:text-[0.7rem] tracking-[0.45em] text-shinchu">
           06 — COMPANY
         </p>
 
@@ -51,7 +51,7 @@ export default function Company() {
               style={{ ["--d" as string]: "300ms" }}
               className="mt-14 flex items-end gap-4 border-t border-[color:var(--line)] pt-8"
             >
-              <span className="font-en text-[0.65rem] tracking-[0.3em] text-sumi/45">
+              <span className="font-en text-[0.72rem] sm:text-[0.65rem] tracking-[0.3em] text-sumi/45">
                 FOUNDED
               </span>
               <span className="font-en text-[clamp(3rem,7vw,5rem)] leading-none text-shinchu">

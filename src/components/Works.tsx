@@ -75,7 +75,7 @@ export default function Works() {
         >
           {/* 先頭のカードは見出しそのもの */}
           <div className="flex w-[min(78vw,26rem)] shrink-0 snap-start flex-col justify-center">
-            <p className="mb-8 font-en text-[0.7rem] tracking-[0.45em] text-shinchu">
+            <p className="mb-8 font-en text-[0.78rem] sm:text-[0.7rem] tracking-[0.45em] text-shinchu">
               02 — WORKS
             </p>
             <h2 className="font-heading text-[clamp(1.75rem,3.4vw,2.75rem)] leading-[1.7] tracking-[0.12em]">
@@ -88,7 +88,7 @@ export default function Works() {
             </p>
             <p
               aria-hidden
-              className="mt-12 font-en text-[0.6rem] tracking-[0.35em] text-kinari/35"
+              className="mt-12 font-en text-[0.68rem] sm:text-[0.6rem] tracking-[0.35em] text-kinari/35"
             >
               {pinned ? "SCROLL →" : "SWIPE →"}
             </p>
@@ -121,7 +121,7 @@ export default function Works() {
               <p className="mt-4 max-w-md text-sm leading-[2.3] text-kinari/60">
                 {w.body}
               </p>
-              <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[0.7rem] tracking-[0.2em] text-kinari/40">
+              <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[0.78rem] sm:text-[0.7rem] tracking-[0.2em] text-kinari/40">
                 <span>{w.place}</span>
                 <span className="h-px w-6 bg-kinari/25" />
                 <span className="font-en">{w.year}</span>
