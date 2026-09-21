@@ -9,10 +9,10 @@ export const site = {
     "門まわりから駐車場、塀、植栽まで。外構・エクステリア工事を職人が直接施工します。",
   founded: 2026,
   // TODO: 確定次第差し替え(電話番号は非表示の方針のため設けない)
-  address: "〇〇県〇〇市〇〇 0-0-0",
-  hours: "9:00〜18:00(定休日:水曜)",
+  address: "神奈川県横浜市",
+  hours: "9:00〜18:00(定休日:日曜)",
   email: "info@example.com",
-  areas: "〇〇県全域および近隣地域",
+  areas: "神奈川県全域・東京都",
 } as const;
 
 export const nav = [
